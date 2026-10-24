@@ -494,3 +494,13 @@ a.viz:hover { transform: translateY(-5px); box-shadow: 0 30px 50px -36px rgba(0,
 .patent-links a:hover { transform: translateX(4px); background: var(--accent); color: #fff; }
 .patent-links .pn { font-family: var(--mono); font-size: .75rem; color: var(--accent); flex: none; padding-top: 2px; }
 .patent-links a:hover .pn { color: #fff; }
+
+/* hero whoami line */
+.eyebrow.who { display: block; }
+.eyebrow.who .prompt { color: var(--accent); }
+.who-caret { color: var(--accent); animation: blink 1s steps(1) infinite; margin-left: 1px; }
+.who-caret.off { opacity: 0; transition: opacity .4s; animation: none; }
+@keyframes blink { 50% { opacity: 0; } }
+.who-out { display: block; margin-top: 6px; opacity: 0; transform: translateY(4px); transition: opacity .6s ease, transform .6s cubic-bezier(.2,.7,.2,1); }
+.who-out.show { opacity: 1; transform: none; }
+.who-out strong { color: var(--accent); font-weight: 600; font-size: 1.05rem; letter-spacing: .01em; }

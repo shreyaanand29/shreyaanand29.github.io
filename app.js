@@ -396,3 +396,16 @@ const yearEl = document.getElementById('year'); if (yearEl) yearEl.textContent =
   });
   addEventListener('touchend', e => { if (ty0 === null || busy) return; const dy = ty0 - e.changedTouches[0].clientY; ty0 = null; if (Math.abs(dy) > 60) go(current() + (dy > 0 ? 1 : -1)); }, { passive: true });
 })();
+
+/* ---- hero: $ whoami → Shreya Anand ---- */
+(() => {
+  const cmd = document.getElementById('who-cmd'), out = document.getElementById('who-out'), caret = document.querySelector('.who-caret'); if (!cmd) return;
+  const word = 'whoami';
+  if (matchMedia('(prefers-reduced-motion: reduce)').matches) { cmd.textContent = word; out.classList.add('show'); caret.remove(); return; }
+  let i = 0;
+  setTimeout(function type() {
+    cmd.textContent = word.slice(0, ++i);
+    if (i < word.length) setTimeout(type, 90);
+    else setTimeout(() => { out.classList.add('show'); setTimeout(() => caret.classList.add('off'), 1200); }, 350);
+  }, 600);
+})();
