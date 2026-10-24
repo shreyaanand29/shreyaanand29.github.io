@@ -503,4 +503,7 @@ a.viz:hover { transform: translateY(-5px); box-shadow: 0 30px 50px -36px rgba(0,
 @keyframes blink { 50% { opacity: 0; } }
 .who-out { display: block; margin-top: 6px; opacity: 0; transform: translateY(4px); transition: opacity .6s ease, transform .6s cubic-bezier(.2,.7,.2,1); }
 .who-out.show { opacity: 1; transform: none; }
-.who-out strong { color: var(--accent); font-weight: 600; font-size: 1.05rem; letter-spacing: .01em; }
+.who-out { margin: 10px 0 6px; }
+.who-out strong { display: block; font-family: var(--sans); font-weight: 700; font-size: 2.8rem; line-height: 1.05; letter-spacing: -.03em; color: var(--accent); }
+.who-out small { display: block; margin-top: 6px; font-family: var(--mono); font-size: .8rem; color: var(--muted); }
+@media (max-width: 680px) { .who-out strong { font-size: 2rem; } }
