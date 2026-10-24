@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Work · Shreya Anand</title>
+  <meta name="description" content="Technical work by Shreya Anand: payments compliance systems at Airbnb, Unified Content Lake at LinkedIn, Quick Pen Tool and generative vector tracing at Adobe.">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <canvas id="net" aria-hidden="true"></canvas>
+  <div class="progress" id="progress" aria-hidden="true"></div>
+
+  <header class="top">
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="work.html" aria-current="page">Work</a>
+      <a href="mentoring.html">Mentoring</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="page-head">
+      <p class="eyebrow"><span class="num">Work</span></p>
+      <h1>Systems that have to be <span class="mark" data-mark>right</span>, not just shipped.</h1>
+      <p class="lede">A C++ drawing tool in the browser. A knowledge pipeline for a support org. Payments infrastructure under regulators' eyes. Different stacks, same rule: it has to be correct.</p>
+    </section>
+
+    <section class="section reveal">
+      <h2><span class="num">01</span><i class="ic" data-icon="layers"></i>Case studies</h2>
+
+      <article class="study" id="payments-compliance">
+        <div class="study-side">
+          <span class="logo"><img src="img/airbnb.svg" alt="Airbnb logo"></span>
+          <span class="case-meta">Airbnb</span>
+          <span class="case-meta">2025 to now</span>
+          <ul class="chips"><li>Java</li><li>Kotlin</li><li>Kafka</li><li>JavaScript</li><li>Claude Code</li></ul>
+        </div>
+        <div class="study-main">
+          <h3>Payments compliance infrastructure</h3>
+          <svg class="ill" viewBox="0 0 240 140" aria-hidden="true">
+  <circle class="ill-ring" cx="120" cy="70" r="40"/><circle class="ill-ring r2" cx="120" cy="70" r="40"/>
+  <path class="ill-shield" d="M120 28l34 12v26c0 24-16 38-34 46-18-8-34-22-34-46V40z"/>
+  <path class="ill-tick" d="M104 70l11 11 22-24"/>
+  <g class="ill-coins"><circle cx="40" cy="40" r="9"/><circle cx="36" cy="100" r="7"/><circle cx="204" cy="46" r="7"/><circle cx="200" cy="104" r="9"/></g>
+</svg><p class="study-lead">Keeping a global payments platform compliant, and one step ahead of financial crime.</p>
+          <p>Backend services and Kafka pipelines that product, trust and investigations teams all lean on. Millions of hosts and guests a day, so every edge case eventually happens.</p>
+          <p>On the side: AI-assisted workflows that take a change from draft to review-ready, and the sessions that get the team using them.</p>
+        </div>
+      </article>
+
+      <article class="study" id="content-lake">
+        <div class="study-side">
+          <span class="logo"><img src="img/linkedin.png" alt="LinkedIn logo"></span>
+          <span class="case-meta">LinkedIn</span>
+          <span class="case-meta">2024 to 2025</span>
+          <ul class="chips"><li>Python</li><li>Java</li><li>Kafka</li><li>MySQL</li><li>REST</li></ul>
+        </div>
+        <div class="study-main">
+          <h3>Unified Content Lake</h3>
+          <svg class="ill" viewBox="0 0 240 140" aria-hidden="true">
+  <g class="ill-src"><circle cx="30" cy="30" r="10"/><circle cx="30" cy="70" r="10"/><circle cx="30" cy="110" r="10"/></g>
+  <path id="pl1" class="ill-line" d="M40 30 C 100 30, 120 70, 170 70"/><path id="pl2" class="ill-line" d="M40 70 L 170 70"/><path id="pl3" class="ill-line" d="M40 110 C 100 110, 120 70, 170 70"/>
+  <g class="ill-store"><ellipse cx="200" cy="48" rx="26" ry="8"/><path d="M174 48v44c0 4.4 11.6 8 26 8s26-3.6 26-8V48"/><path d="M174 70c0 4.4 11.6 8 26 8s26-3.6 26-8"/></g>
+  <circle class="ill-dot" r="4"><animateMotion dur="2.2s" repeatCount="indefinite" begin="0s"><mpath href="#pl1"/></animateMotion></circle>
+  <circle class="ill-dot" r="4"><animateMotion dur="2.2s" repeatCount="indefinite" begin="0.7s"><mpath href="#pl2"/></animateMotion></circle>
+  <circle class="ill-dot" r="4"><animateMotion dur="2.2s" repeatCount="indefinite" begin="1.4s"><mpath href="#pl3"/></animateMotion></circle>
+</svg><p class="study-lead">Support knowledge lived in a dozen systems. I led the pipeline that made it one.</p>
+          <p>Kafka ingestion, normalisation, and a store tuned for the bursty, read-heavy traffic of live support. Virtual assistants and knowledge hubs read from it at conversation speed.</p>
+          <p>Drove the integration across internal tools. Positive responses up 65 percent. Presented at the company-wide all-hands.</p>
+          <dl class="stats">
+            <div><dt>Positive response rate</dt><dd data-count="65" data-prefix="+" data-suffix="%">+65%</dd></div>
+          </dl>
+        </div>
+      </article>
+
+      <article class="study" id="quick-pen">
+        <div class="study-side">
+          <span class="logo"><img src="img/adobe.png" alt="Adobe logo"></span>
+          <span class="case-meta">Adobe</span>
+          <span class="case-meta">2022 to 2024</span>
+          <ul class="chips"><li>C++</li><li>JavaScript</li><li>Vector graphics</li></ul>
+        </div>
+        <div class="study-main">
+          <h3>Quick Pen Tool, Illustrator on the Web</h3>
+          <svg class="ill" viewBox="0 0 240 140" aria-hidden="true">
+  <path class="ill-curve" d="M24 110 C 60 10, 120 10, 130 70 S 200 130, 216 30"/>
+  <g class="ill-handles"><path d="M24 110 L 48 50"/><path d="M130 70 L 100 40 M130 70 L 160 100"/><path d="M216 30 L 196 80"/></g>
+  <g class="ill-anchor"><rect x="20" y="106" width="8" height="8"/><rect x="126" y="66" width="8" height="8"/><rect x="212" y="26" width="8" height="8"/></g>
+  <g class="ill-hdot"><circle cx="48" cy="50" r="3"/><circle cx="100" cy="40" r="3"/><circle cx="160" cy="100" r="3"/><circle cx="196" cy="80" r="3"/></g>
+</svg><p class="study-lead">The pen tool is the heart of Illustrator and the hardest thing in it to learn. I led the rethink.</p>
+          <p>Core C++ on Illustrator for the Web, shipped as a public beta at Adobe MAX 2023. Quick Pen makes precise paths feel direct without loosening the geometry underneath. It is now one of Illustrator's most used tools.</p>
+          <p>Ten plus features end to end, from vector computation to GenAI text-to-vector. Spot awards two quarters running.</p>
+          <dl class="stats">
+            <div><dt>Quick Pen Tool</dt><dd>One of Illustrator's most used tools</dd></div>
+            <div><dt>Shipped</dt><dd>10+ features</dd></div>
+          </dl>
+        </div>
+      </article>
+
+      <article class="study" id="vectormitate">
+        <div class="study-side">
+          <span class="logo"><img src="img/adobe.png" alt="Adobe logo"></span>
+          <span class="case-meta">Adobe</span>
+          <span class="case-meta">2024 · two patents</span>
+          <ul class="chips"><li>C++</li><li>Python</li><li>Generative models</li><li>Geometry</li></ul>
+        </div>
+        <div class="study-main">
+          <h3>Generative vector tracing</h3>
+          <svg class="ill" viewBox="0 0 240 140" aria-hidden="true">
+  <g class="ill-px">
+    <rect x="40" y="30" width="14" height="14"/><rect x="56" y="30" width="14" height="14"/><rect x="72" y="30" width="14" height="14"/>
+    <rect x="24" y="46" width="14" height="14"/><rect x="40" y="46" width="14" height="14"/><rect x="56" y="46" width="14" height="14"/><rect x="72" y="46" width="14" height="14"/><rect x="88" y="46" width="14" height="14"/>
+    <rect x="24" y="62" width="14" height="14"/><rect x="40" y="62" width="14" height="14"/><rect x="56" y="62" width="14" height="14"/><rect x="72" y="62" width="14" height="14"/><rect x="88" y="62" width="14" height="14"/>
+    <rect x="24" y="78" width="14" height="14"/><rect x="40" y="78" width="14" height="14"/><rect x="56" y="78" width="14" height="14"/><rect x="72" y="78" width="14" height="14"/><rect x="88" y="78" width="14" height="14"/>
+    <rect x="40" y="94" width="14" height="14"/><rect x="56" y="94" width="14" height="14"/><rect x="72" y="94" width="14" height="14"/>
+  </g>
+  <path class="ill-arrow" d="M112 70h22m0 0l-6-6m6 6l-6 6"/>
+  <path class="ill-vec" d="M180 32 C 206 32, 216 50, 216 70 S 206 108, 180 108 S 144 90, 144 70 S 154 32, 180 32 Z"/>
+  <g class="ill-anchor"><rect x="176" y="28" width="8" height="8"/><rect x="212" y="66" width="8" height="8"/><rect x="176" y="104" width="8" height="8"/><rect x="140" y="66" width="8" height="8"/></g>
+</svg><p class="study-lead">Classic image tracing fits curves to pixels and produces paths no human would draw.</p>
+          <p>Project Vectormitate: a generative model of vector strokes, so traced output is editable, intentional geometry. Then a second method snaps those traces to the shapes the designer meant. Two patents.</p>
+          <ul class="mini">
+            <li><a href="https://patents.google.com/patent/US20260024212A1/en"><strong>Advanced Image Tracing for Vectorizing Raster Images</strong> ↗</a> US 2026/0024212. Filed July 2024, published January 2026.</li>
+            <li><a href="https://patents.google.com/patent/US20260057577A1/en"><strong>Aligning Traces to Geometric Shapes</strong> ↗</a> US 2026/0057577. Filed August 2024, published February 2026.</li>
+          </ul>
+                  </div>
+      </article>
+
+    </section>
+
+    <section class="section reveal">
+      <h2><span class="num">02</span><i class="ic" data-icon="cpu"></i>Areas of expertise</h2>
+      <div class="grid three tight">
+        <article class="skill">
+          <i class="ic big" data-icon="server"></i><h3>Distributed backend services</h3>
+          <p>Service decomposition, idempotent APIs, retries with backoff, circuit breaking, and consistency models chosen on purpose.</p>
+        </article>
+        <article class="skill">
+          <i class="ic big" data-icon="zap"></i><h3>Event-driven pipelines</h3>
+          <p>Kafka producers and consumers at scale. Partitioning for ordering, dead-letter handling, replay and backfill.</p>
+        </article>
+        <article class="skill">
+          <i class="ic big" data-icon="database"></i><h3>Data modelling and retrieval</h3>
+          <p>Schema design across heterogeneous sources, indexing and caching, query paths tuned for p99 under bursty load.</p>
+        </article>
+        <article class="skill">
+          <i class="ic big" data-icon="hexagon"></i><h3>Systems C++ and computational geometry</h3>
+          <p>Bézier curve fitting, path simplification, hit testing, and numerically stable geometry compiled for the browser.</p>
+        </article>
+        <article class="skill">
+          <i class="ic big" data-icon="sparkles"></i><h3>Applied generative models</h3>
+          <p>Generative vector modelling for raster-to-vector tracing, text-to-vector evaluation, and LLM-driven developer workflows.</p>
+        </article>
+        <article class="skill">
+          <i class="ic big" data-icon="activity"></i><h3>Reliability and observability</h3>
+          <p>SLO-driven alerting, structured logging and tracing, incident response and postmortems.</p>
+        </article>
+      </div>
+    </section>
+
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
