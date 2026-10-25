@@ -721,3 +721,6 @@ nav .ic svg * { animation: none !important; stroke-dashoffset: 0 !important; }
 .section > h2 > .ic { grid-row: 1; }
 .section > h2 .h2-title { grid-row: 1; }
 .section > h2 .h2-hint { grid-row: 1; }
+
+/* no italic accent words */
+.about-prose em, .contact-note em { font-family: inherit; font-style: normal; font-size: inherit; color: inherit; }
