@@ -678,3 +678,17 @@ nav .ic svg * { animation: none !important; stroke-dashoffset: 0 !important; }
   .section > h2::before { font-size: 4.5rem; top: -14px; }
 }
 @media (prefers-reduced-motion: reduce) { .section > h2::before, .section > h2 .h2-title::after { transition: none; opacity: 1; transform: none; } }
+
+/* =================== wider content column =================== */
+:root { --max: 1040px; }
+.top { max-width: 1120px; }
+.lede, .study-main p, .about-prose p { max-width: 640px; }
+.hero h1 { max-width: 760px; }
+.grid.three { gap: 20px; } .viz-grid, .contact-grid { gap: 20px; }
+.xp summary { grid-template-columns: 150px 1fr 1fr 20px; } .xp-body { padding-left: 166px; }
+.study { grid-template-columns: 200px 1fr; gap: 32px; }
+.list.plain li { grid-template-columns: 170px 1fr; }
+.about { gap: 56px; }
+.term-out { max-height: 380px; }
+@media (max-width: 1100px) { :root { --max: 920px; } }
+@media (max-width: 680px) { .xp summary { grid-template-columns: 1fr 20px; } .xp-body { padding-left: 0; } .list.plain li { grid-template-columns: 1fr; } }
