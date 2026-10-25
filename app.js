@@ -103,7 +103,7 @@ referrals       message me on ${L('https://www.linkedin.com/in/iamshreyaanand', 
 linkedin  ${L('https://www.linkedin.com/in/iamshreyaanand', 'linkedin.com/in/iamshreyaanand')}
 topmate   ${L('https://topmate.io/iamshreyaanand', 'book a session on Topmate')}`,
     clear: () => { out.innerHTML = ''; return null; },
-    ls: () => `${L('index.html','index.html')}  ${L('work.html','work.html')}  ${L('mentoring.html','mentoring.html')}`,
+    ls: () => `${L('index.html','index.html')}  ${L('work.html','work.html')}`,
     cd: () => `use <span class="cmd">ls</span> and click. this shell is read-only.`,
     pwd: () => `/home/shreya/portfolio`,
     sudo: () => `<span class="err">nice try.</span>`,

@@ -646,3 +646,12 @@ nav .ic svg * { animation: none !important; stroke-dashoffset: 0 !important; }
 .about-list .v { display: inline-flex; flex-wrap: nowrap; white-space: nowrap; gap: 6px; }
 .about-list li { gap: 12px; font-size: .78rem; }
 .about-list .v .logo-sm { margin: 0 2px 0 4px; }
+
+/* mentoring on Work */
+.contact-grid.one { grid-template-columns: 1fr; gap: 12px; }
+.contact-grid.one .contact-card { flex-direction: row; align-items: center; gap: 16px; padding: 16px 18px; }
+.contact-grid.one .contact-card .ic.big { margin: 0; width: 44px; height: 44px; } .contact-grid.one .contact-card .ic.big svg { width: 22px; height: 22px; }
+.contact-grid.one .contact-card span { font-size: 1.05rem; } .contact-grid.one .contact-card small { word-break: normal; }
+.contact-grid.one .contact-card > span, .contact-grid.one .contact-card > small { display: block; }
+.contact-grid.one .contact-card .txt { display: flex; flex-direction: column; }
+#mentoring .big { font-size: 1.3rem; }
