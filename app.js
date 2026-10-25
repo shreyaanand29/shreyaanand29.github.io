@@ -50,7 +50,7 @@ document.querySelectorAll('.reveal').forEach(el => io.observe(el));
 requestAnimationFrame(() => document.querySelectorAll('.reveal').forEach(el => { if (el.getBoundingClientRect().top < innerHeight) el.classList.add('in'); }));
 
 /* ---------- reading progress + active nav ---------- */
-const bar = document.getElementById('progress'), navLinks = [...document.querySelectorAll('nav .sections a')];
+const bar = document.getElementById('progress'), navLinks = [...document.querySelectorAll('nav .sections a:not(.page)')];
 const targets = navLinks.map(a => a.getAttribute('href').startsWith('#') ? document.querySelector(a.getAttribute('href')) : null).filter(Boolean);
 function onScroll() {
   const max = document.documentElement.scrollHeight - innerHeight;
@@ -401,7 +401,7 @@ const yearEl = document.getElementById('year'); if (yearEl) yearEl.textContent =
 /* ---- nav bar: compact on scroll, gliding pill ---- */
 (() => {
   const top = document.querySelector('.top'), secs = document.querySelector('.bar .sections'), glider = secs && secs.querySelector('.glider'); if (!top || !glider) return;
-  const links = [...secs.querySelectorAll('a')];
+  const links = [...secs.querySelectorAll('a:not(.page)')];
   let hovering = null;
   const place = (el, hover) => {
     if (!el) { glider.classList.remove('on'); return; }
