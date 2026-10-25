@@ -727,3 +727,12 @@ nav .ic svg * { animation: none !important; stroke-dashoffset: 0 !important; }
 
 /* every section vertically centred in its screen */
 @media (min-width: 901px) { .hero, .page-head, .section { justify-content: center; } }
+
+/* hover legibility fixes */
+.bar a.cta:hover { background: var(--accent); color: #fff !important; }
+.bar a.brand:hover { background: none; color: var(--ink) !important; }
+.pillar::after, .skill::after, .contact-card::after, .case a::after { z-index: 0; background: radial-gradient(240px circle at var(--mx) var(--my), rgba(255,255,255,.4), transparent 60%); }
+.pillar > *, .skill > *, .contact-card > *, .case a > * { position: relative; z-index: 1; }
+.contact-card:hover span, .contact-card:hover small, .skill:hover h3, .skill:hover p, .pillar:hover h3, .pillar:hover p { color: var(--ink); }
+.contact-card:hover small { color: var(--muted); }
+.skill:hover p, .pillar:hover p { color: #333; }
