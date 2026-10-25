@@ -367,7 +367,7 @@ const yearEl = document.getElementById('year'); if (yearEl) yearEl.textContent =
   const secs = [...document.querySelectorAll('main > .hero, main > .page-head, main > .section')]; if (secs.length < 2) return;
   secs.forEach((s, i) => { if (!s.id) s.id = 'sec-' + i; });
   const deck = document.createElement('nav'); deck.className = 'deck'; deck.setAttribute('aria-label', 'Sections');
-  deck.innerHTML = secs.map(s => { const h = s.querySelector('h2'); const label = h ? h.textContent.replace(/^\d+\s*/, '').replace(/click a row.*|type help|all work →|how it works →/i, '').trim() : 'Top'; return `<a href="#${s.id}" aria-label="${label}"><span>${label}</span></a>`; }).join('');
+  deck.innerHTML = secs.map(s => { const h = s.querySelector('h2'); const label = h ? h.textContent.replace(/^\d+\s*/, '').replace(/type help/i, '').trim() : 'Top'; return `<a href="#${s.id}" aria-label="${label}"><span>${label}</span></a>`; }).join('');
   document.body.appendChild(deck);
   const dots = [...deck.children];
   const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) dots.forEach((d, i) => d.classList.toggle('on', secs[i] === e.target)); }), { rootMargin: '-45% 0px -45% 0px' });
