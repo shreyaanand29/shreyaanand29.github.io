@@ -706,3 +706,11 @@ nav .ic svg * { animation: none !important; stroke-dashoffset: 0 !important; }
 .contact-grid.four .contact-card small { word-break: normal; }
 @media (max-width: 1100px) { .contact-grid.four { grid-template-columns: repeat(2, 1fr); } }
 @media (max-width: 680px) { .contact-grid.four { grid-template-columns: 1fr; } }
+
+/* contact note v2 */
+.contact-note { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 14px 24px; margin: -6px 0 26px; max-width: none; }
+.contact-note .big { margin: 0; font-size: 1.4rem; }
+.open-for { margin: 0; gap: 8px; }
+.open-for li { display: inline-flex; align-items: center; gap: 8px; padding: 8px 14px; font-size: .8rem; color: var(--ink); background: var(--card); }
+.open-for li .ic { margin: 0; width: 14px; height: 14px; display: block; } .open-for li .ic svg { display: block; }
+@media (max-width: 680px) { .contact-note .big { font-size: 1.2rem; } }
