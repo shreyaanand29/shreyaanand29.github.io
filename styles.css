@@ -714,3 +714,10 @@ nav .ic svg * { animation: none !important; stroke-dashoffset: 0 !important; }
 .open-for li { display: inline-flex; align-items: center; gap: 8px; padding: 8px 14px; font-size: .8rem; color: var(--ink); background: var(--card); }
 .open-for li .ic { margin: 0; width: 14px; height: 14px; display: block; } .open-for li .ic svg { display: block; }
 @media (max-width: 680px) { .contact-note .big { font-size: 1.2rem; } }
+
+/* no section numbers */
+.section > h2 .num, .section > h2::before { display: none; }
+.section > h2 { grid-template-rows: auto; row-gap: 0; }
+.section > h2 > .ic { grid-row: 1; }
+.section > h2 .h2-title { grid-row: 1; }
+.section > h2 .h2-hint { grid-row: 1; }
