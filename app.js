@@ -420,3 +420,11 @@ const yearEl = document.getElementById('year'); if (yearEl) yearEl.textContent =
   addEventListener('scroll', sync, { passive: true }); addEventListener('resize', sync); sync();
   setTimeout(sync, 500); setTimeout(sync, 1200);
 })();
+
+/* ---- section headings: wrap the bare title text so it can be styled ---- */
+document.querySelectorAll('.section > h2').forEach(h => {
+  const num = h.querySelector('.num'); if (num) h.dataset.num = num.textContent.trim();
+  [...h.childNodes].forEach(n => {
+    if (n.nodeType === 3 && n.textContent.trim()) { const s = document.createElement('span'); s.className = 'h2-title'; s.textContent = n.textContent.trim(); h.replaceChild(s, n); }
+  });
+});
