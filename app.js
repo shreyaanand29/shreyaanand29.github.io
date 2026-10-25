@@ -397,3 +397,26 @@ const yearEl = document.getElementById('year'); if (yearEl) yearEl.textContent =
   addEventListener('touchend', e => { if (ty0 === null || busy) return; const dy = ty0 - e.changedTouches[0].clientY; ty0 = null; if (Math.abs(dy) > 60) go(current() + (dy > 0 ? 1 : -1)); }, { passive: true });
 })();
 
+
+/* ---- nav bar: compact on scroll, gliding pill ---- */
+(() => {
+  const top = document.querySelector('.top'), secs = document.querySelector('.bar .sections'), glider = secs && secs.querySelector('.glider'); if (!top || !glider) return;
+  const links = [...secs.querySelectorAll('a')];
+  let hovering = null;
+  const place = (el, hover) => {
+    if (!el) { glider.classList.remove('on'); return; }
+    const r = el.getBoundingClientRect(), b = secs.getBoundingClientRect();
+    glider.style.left = (r.left - b.left) + 'px'; glider.style.width = r.width + 'px';
+    glider.classList.add('on'); glider.classList.toggle('hover', !!hover);
+    links.forEach(l => l.classList.toggle('peek', hover && l.classList.contains('active') && l !== el));
+  };
+  const active = () => links.find(l => l.classList.contains('active'));
+  const sync = () => { top.classList.toggle('compact', scrollY > 60); if (!hovering) requestAnimationFrame(() => place(active(), false)); };
+  links.forEach(l => {
+    l.addEventListener('pointerenter', () => { hovering = l; place(l, !l.classList.contains('active')); });
+    l.addEventListener('pointerleave', () => { hovering = null; place(active(), false); });
+  });
+  secs.addEventListener('transitionend', () => { if (!hovering) place(active(), false); });
+  addEventListener('scroll', sync, { passive: true }); addEventListener('resize', sync); sync();
+  setTimeout(sync, 500); setTimeout(sync, 1200);
+})();
