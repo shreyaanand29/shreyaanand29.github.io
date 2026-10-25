@@ -466,7 +466,7 @@ a.viz:hover { transform: translateY(-5px); box-shadow: 0 30px 50px -36px rgba(0,
   .deck a span { position: absolute; right: 18px; top: 50%; transform: translateY(-50%); white-space: nowrap; font-family: var(--mono); font-size: .7rem; color: var(--muted); opacity: 0; transition: opacity .2s; pointer-events: none; background: var(--card); padding: 2px 8px; border-radius: 6px; border: 1px solid var(--rule); }
   .deck a:hover span { opacity: 1; }
   /* keep the long sections readable: let them grow beyond the viewport */
-  #experience, #terminal { justify-content: flex-start; }
+  #experience, #terminal { justify-content: center; }
 }
 
 /* ---- Know more button ---- */
@@ -724,3 +724,6 @@ nav .ic svg * { animation: none !important; stroke-dashoffset: 0 !important; }
 
 /* no italic accent words */
 .about-prose em, .contact-note em { font-family: inherit; font-style: normal; font-size: inherit; color: inherit; }
+
+/* every section vertically centred in its screen */
+@media (min-width: 901px) { .hero, .page-head, .section { justify-content: center; } }
