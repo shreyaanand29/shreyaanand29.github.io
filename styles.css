@@ -604,3 +604,45 @@ nav .ic svg * { animation: none !important; stroke-dashoffset: 0 !important; }
   .bar .sections a:not(:hover):not(.active):not([aria-current="page"]) .lbl { max-width: 0; opacity: 0; margin-left: -8px; }
   .brand-name { max-width: 0; opacity: 0; }
 }
+
+/* =================== about section =================== */
+.about { display: grid; grid-template-columns: 1.15fr 1fr; gap: 48px; align-items: start; }
+.about-prose p { font-size: 1.15rem; line-height: 1.55; color: var(--ink); margin: 0 0 18px; }
+.about-prose em { font-family: var(--serif); font-style: italic; color: var(--accent); font-size: 1.08em; }
+.about-pills { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 22px; }
+.apill { display: inline-flex; align-items: center; gap: 8px; padding: 8px 14px; border-radius: 999px; border: 1px solid var(--rule); background: var(--card); color: var(--ink); text-decoration: none; font-family: var(--mono); font-size: .78rem; transition: transform .25s cubic-bezier(.2,.9,.3,1.4), border-color .2s, background .2s; }
+.apill .ic { margin: 0; width: 15px; height: 15px; display: block; } .apill .ic svg { display: block; }
+.apill:hover { transform: translateY(-2px); border-color: var(--accent); background: var(--accent-soft); }
+.about-list { list-style: none; margin: 6px 0 0; padding: 0; }
+.about-list li { display: flex; justify-content: space-between; align-items: center; gap: 16px; padding: 14px 0; border-bottom: 1px solid var(--rule); font-family: var(--mono); font-size: .8rem; }
+.about-list .k { color: var(--muted); text-transform: uppercase; letter-spacing: .08em; font-size: .72rem; flex: none; }
+.about-list .v { text-align: right; color: var(--ink); display: inline-flex; align-items: center; gap: 6px; flex-wrap: wrap; justify-content: flex-end; }
+.about-list .v .logo-sm { width: 16px; height: 16px; margin: 0 2px 0 6px; vertical-align: middle; }
+.about-list .v .logo-sm:first-child { margin-left: 0; }
+.stagger { transform: translateX(-20px); }
+@media (max-width: 680px) { .about { grid-template-columns: 1fr; gap: 28px; } .about-prose p { font-size: 1.05rem; } }
+
+/* =================== nav v4: light, thicker =================== */
+.bar { background: var(--card); color: var(--ink); border: 1px solid var(--rule); box-shadow: 0 18px 44px -28px rgba(0,0,0,.35); padding: 10px 10px 10px 22px; }
+.top.compact .bar { padding: 7px 7px 7px 16px; }
+.bar a { color: var(--muted); }
+.brand { color: var(--ink) !important; }
+.bar .sections a { padding: 12px 16px; font-size: .88rem; }
+.top.compact .bar .sections a { padding: 10px 13px; }
+.bar .sections a:hover { color: var(--ink); } .bar .sections a:hover .ic { color: var(--accent); }
+.bar .sections a.active, .bar .sections a.active .ic { color: #fff; }
+.bar .sections a.active.peek, .bar .sections a.active.peek .ic { color: var(--muted); }
+.bar .sections a.page { color: var(--ink); }
+.bar .sep { background: var(--rule); height: 24px; }
+.glider.hover { background: var(--accent-soft); }
+.cta { background: #141414; color: #fff !important; padding: 12px 20px; }
+.cta:hover { background: var(--accent); }
+.top.compact .cta { padding: 9px 15px; }
+@media (min-width: 901px) { .hero, .page-head, .section { min-height: calc(100vh - 100px); scroll-margin-top: 100px; } }
+@media (max-width: 1240px) and (min-width: 901px) { .bar .sections a { padding: 12px 13px; } }
+
+/* about list fit */
+.about { grid-template-columns: 1.1fr 1fr; gap: 40px; }
+.about-list .v { display: inline-flex; flex-wrap: nowrap; white-space: nowrap; gap: 6px; }
+.about-list li { gap: 12px; font-size: .78rem; }
+.about-list .v .logo-sm { margin: 0 2px 0 4px; }
