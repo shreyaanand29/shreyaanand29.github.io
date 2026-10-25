@@ -692,3 +692,7 @@ nav .ic svg * { animation: none !important; stroke-dashoffset: 0 !important; }
 .term-out { max-height: 380px; }
 @media (max-width: 1100px) { :root { --max: 920px; } }
 @media (max-width: 680px) { .xp summary { grid-template-columns: 1fr 20px; } .xp-body { padding-left: 0; } .list.plain li { grid-template-columns: 1fr; } }
+
+/* contact note */
+.contact-note { max-width: 680px; font-size: 1.2rem; line-height: 1.55; color: var(--ink); margin: -8px 0 28px; }
+.contact-note em { font-family: var(--serif); font-style: italic; color: var(--accent); font-size: 1.08em; }
