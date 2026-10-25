@@ -5,17 +5,27 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Shreya Anand</title>
   <meta name="description" content="Shreya Anand. Software engineer at Airbnb building backend systems for payments compliance. Previously Adobe and LinkedIn. Mentors job seekers.">
-  <link rel="stylesheet" href="styles.css?v=202610251430">
+  <link rel="stylesheet" href="styles.css?v=202610251435">
 </head>
 <body>
   <canvas id="net" aria-hidden="true"></canvas>
   <div class="progress" id="progress" aria-hidden="true"></div>
 
   <header class="top">
-    <nav>
-      <a href="index.html" aria-current="page">Home</a>
-      <a href="work.html">Work</a>
-      <a href="mentoring.html">Mentoring</a>
+    <nav class="bar" aria-label="Main">
+      <a class="home" href="index.html" aria-label="Home" aria-current="page"><i class="ic" data-icon="home"></i></a>
+      <span class="group sections">
+        <a href="#experience">Experience</a>
+        <a href="#patents">Patents</a>
+        <a href="#education">Education</a>
+        <a href="#what-i-do">What I do</a>
+        <a href="#terminal">Terminal</a>
+        <a href="#contact">Contact</a>
+      </span>
+      <span class="group pages">
+        <a href="work.html">Work</a>
+        <a href="mentoring.html">Mentoring</a>
+      </span>
     </nav>
   </header>
 
@@ -54,7 +64,7 @@
       </div>
     </section>
 
-    <section class="section reveal">
+    <section id="patents" class="section reveal">
       <h2><span class="num">02</span><i class="ic" data-icon="award"></i>Patents and recognition</h2>
       <div class="viz-grid">
         <div class="viz"><svg class="ill" viewBox="0 0 240 140" aria-hidden="true">
@@ -80,7 +90,7 @@
       </div>
     </section>
 
-    <section class="section reveal">
+    <section id="education" class="section reveal">
       <h2><span class="num">03</span><i class="ic" data-icon="graduation"></i>Education</h2>
       <ul class="list plain">
         <li class="stagger"><span class="label"><i class="ic" data-icon="graduation"></i>2018 to 2022</span><span class="cell"><img class="logo-sm" src="img/nitkkr.png" alt="NIT Kurukshetra logo">NIT Kurukshetra. B.Tech, Computer Science and Engineering.</span></li>
@@ -88,11 +98,11 @@
     </section>
 
 
-    <section id="work" class="section reveal">
+    <section id="what-i-do" class="section reveal">
       <h2><span class="num">04</span><i class="ic" data-icon="compass"></i>What I do</h2>
       <div class="grid three">
         <a class="pillar" href="work.html"><i class="ic big" data-icon="code"></i><h3>Software engineering</h3><p>Services, pipelines, and the unglamorous work that keeps regulated systems honest.</p></a>
-        <a class="pillar" href="mentoring.html"><i class="ic big" data-icon="users"></i><h3>Mentoring job seekers</h3><p>Resume reviews, referrals I can vouch for, and 1:1s on interviews and offers. First five years, mostly.</p></a>
+        <a class="pillar" href="mentoring.html"><i class="ic big" data-icon="users"></i><h3>Mentoring job seekers</h3><p>Resume reviews, referrals I can vouch for, and 1:1s on interviews and offers.</p></a>
         <a class="pillar" href="https://www.linkedin.com/in/iamshreyaanand/recent-activity/all/"><i class="ic big" data-icon="share"></i><h3>Building a network</h3><p>Short posts on engineering careers and what nobody tells you early on. Useful beats large.</p></a>
       </div>
     </section>
@@ -128,6 +138,6 @@
     </section>
   </main>
 
-  <script src="app.js?v=202610251430"></script>
+  <script src="app.js?v=202610251435"></script>
 </body>
 </html>

@@ -50,7 +50,7 @@ document.querySelectorAll('.reveal').forEach(el => io.observe(el));
 requestAnimationFrame(() => document.querySelectorAll('.reveal').forEach(el => { if (el.getBoundingClientRect().top < innerHeight) el.classList.add('in'); }));
 
 /* ---------- reading progress + active nav ---------- */
-const bar = document.getElementById('progress'), navLinks = [...document.querySelectorAll('nav a')];
+const bar = document.getElementById('progress'), navLinks = [...document.querySelectorAll('nav .sections a')];
 const targets = navLinks.map(a => a.getAttribute('href').startsWith('#') ? document.querySelector(a.getAttribute('href')) : null).filter(Boolean);
 function onScroll() {
   const max = document.documentElement.scrollHeight - innerHeight;
@@ -98,8 +98,7 @@ award  Spot award, Illustrator on the Web Public Beta
 award  Spot award, GenAI model evaluation for text to vector`,
     mentor: () => `1:1 session     ${L('https://topmate.io/iamshreyaanand', 'book a slot')}
 resume review   ${L('https://topmate.io/iamshreyaanand', 'book on Topmate')} with the role you are targeting
-referrals       message me on ${L('https://www.linkedin.com/in/iamshreyaanand', 'LinkedIn')} with the posting
-Mostly for engineers in their first five years.`,
+referrals       message me on ${L('https://www.linkedin.com/in/iamshreyaanand', 'LinkedIn')} with the posting`,
     contact: () => `email     ${L('mailto:shreyaanand2908@gmail.com', 'shreyaanand2908@gmail.com')}
 linkedin  ${L('https://www.linkedin.com/in/iamshreyaanand', 'linkedin.com/in/iamshreyaanand')}
 topmate   ${L('https://topmate.io/iamshreyaanand', 'book a session on Topmate')}`,
@@ -171,9 +170,10 @@ const yearEl = document.getElementById('year'); if (yearEl) yearEl.textContent =
     shuffle: '<path d="M16 3h5v5"/><path d="M4 20L21 3"/><path d="M21 16v5h-5"/><path d="M15 15l6 6"/><path d="M4 4l5 5"/>',
     trophy: '<path d="M8 21h8"/><path d="M12 17v4"/><path d="M7 4h10v5a5 5 0 0 1-10 0V4z"/><path d="M17 6h3v2a3 3 0 0 1-3 3"/><path d="M7 6H4v2a3 3 0 0 0 3 3"/>',
     cpu: '<rect x="4" y="4" width="16" height="16" rx="2"/><rect x="9" y="9" width="6" height="6"/><path d="M9 1v3M15 1v3M9 20v3M15 20v3M20 9h3M20 14h3M1 9h3M1 14h3"/>',
-    arrow: '<path d="M5 12h14"/><path d="M12 5l7 7-7 7"/>'
+    arrow: '<path d="M5 12h14"/><path d="M12 5l7 7-7 7"/>',
+    home: '<path d="M3 11l9-8 9 8"/><path d="M5 10v10h5v-6h4v6h5V10"/>'
   };
-  const TONE = { mail: 'red', linkedin: 'blue', github: 'violet', terminal: 'green', briefcase: 'amber', award: 'amber', 'file-text': 'blue', mic: 'violet', graduation: 'teal', layers: 'violet', code: 'teal', users: 'red', share: 'blue', database: 'teal', 'pen-tool': 'red', sparkles: 'amber', shield: 'green', server: 'blue', zap: 'amber', hexagon: 'violet', activity: 'green', calendar: 'blue', edit: 'red', compass: 'teal', list: 'blue', scale: 'amber', trending: 'green', shuffle: 'violet', trophy: 'amber', cpu: 'teal', arrow: 'red' };
+  const TONE = { home: 'red', mail: 'red', linkedin: 'blue', github: 'violet', terminal: 'green', briefcase: 'amber', award: 'amber', 'file-text': 'blue', mic: 'violet', graduation: 'teal', layers: 'violet', code: 'teal', users: 'red', share: 'blue', database: 'teal', 'pen-tool': 'red', sparkles: 'amber', shield: 'green', server: 'blue', zap: 'amber', hexagon: 'violet', activity: 'green', calendar: 'blue', edit: 'red', compass: 'teal', list: 'blue', scale: 'amber', trending: 'green', shuffle: 'violet', trophy: 'amber', cpu: 'teal', arrow: 'red' };
   document.querySelectorAll('i.ic[data-icon]').forEach(el => {
     const body = ICONS[el.dataset.icon]; if (!body) return;
     if (!el.closest('h2') && TONE[el.dataset.icon]) el.dataset.tone = TONE[el.dataset.icon];
