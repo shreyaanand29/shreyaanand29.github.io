@@ -736,3 +736,10 @@ nav .ic svg * { animation: none !important; stroke-dashoffset: 0 !important; }
 .contact-card:hover span, .contact-card:hover small, .skill:hover h3, .skill:hover p, .pillar:hover h3, .pillar:hover p { color: var(--ink); }
 .contact-card:hover small { color: var(--muted); }
 .skill:hover p, .pillar:hover p { color: #333; }
+
+/* mentoring on Work, v3 */
+.mentor-intro .big { font-size: 1.6rem; margin-bottom: 14px; }
+.mentor-intro p { color: #333; }
+.mentor-topics { margin-bottom: 20px; }
+.mentor-topics .skill > .ic.big { width: 44px; height: 44px; margin-bottom: 10px; } .mentor-topics .skill > .ic.big svg { width: 22px; height: 22px; }
+.mentor-topics .skill h3 { font-size: 1.05rem; } .mentor-topics .skill p { font-size: .88rem; }
